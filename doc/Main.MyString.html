@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Main.MyList.html">
+<link rel="next" href="Main.Pattern.html">
+<link rel="Up" href="Main.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main.MyString</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Main.MyList.html" title="Main.MyList">Previous</a>
+&nbsp;<a class="up" href="Main.html" title="Main">Up</a>
+&nbsp;<a class="post" href="Main.Pattern.html" title="Main.Pattern">Next</a>
+</div>
+<h1>Module <a href="type_Main.MyString.html">Main.MyString</a></h1>
+
+<pre><span class="keyword">module</span> MyString: <code class="code">sig</code> <a href="Main.MyString.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module de modification de string.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEline"><span class="keyword">type</span> <code class="type"></code>line</span> = <code class="type">char list</code> </pre>
+
+
+<pre><span id="TYPEcolumn"><span class="keyword">type</span> <code class="type"></code>column</span> = <code class="type">char list</code> </pre>
+
+
+<pre><span id="VALfold"><span class="keyword">val</span> fold</span> : <code class="type">('o -> char -> 'o) -> 'o -> string -> 'o</code></pre>
+<pre><span id="VALto_char_list"><span class="keyword">val</span> to_char_list</span> : <code class="type">string -> char list</code></pre>
+<pre><span id="VALto_line_list"><span class="keyword">val</span> to_line_list</span> : <code class="type">string -> <a href="Main.MyString.html#TYPEline">line</a> list</code></pre>
+<pre><span id="VALtranspose"><span class="keyword">val</span> transpose</span> : <code class="type"><a href="Main.MyString.html#TYPEline">line</a> list -> <a href="Main.MyString.html#TYPEcolumn">column</a> list</code></pre>
+<pre><span id="VALchar_list_to_string"><span class="keyword">val</span> char_list_to_string</span> : <code class="type">char list -> string</code></pre>
+<pre><span id="VALtest_transpose"><span class="keyword">val</span> test_transpose</span> : <code class="type">string -> string</code></pre><div class="info ">
+Transforme une chaine de caracteres ecrites sur plusieurs lignes en une nouvelle, telles que cette nouvelle chaine represente l'ancienne, mais lu a la verticale.<br>
+</div>
+</body></html>

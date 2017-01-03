@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Main.Data.html">
+<link rel="next" href="Main.Automaton.html">
+<link rel="Up" href="Main.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main.Action</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Main.Data.html" title="Main.Data">Previous</a>
+&nbsp;<a class="up" href="Main.html" title="Main">Up</a>
+&nbsp;<a class="post" href="Main.Automaton.html" title="Main.Automaton">Next</a>
+</div>
+<h1>Module <a href="type_Main.Action.html">Main.Action</a></h1>
+
+<pre><span class="keyword">module</span> Action: <code class="code">sig</code> <a href="Main.Action.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module d'operation avec le type action.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALincrease_clock_by"><span class="keyword">val</span> increase_clock_by</span> : <code class="type"><a href="Main.Clock.html#TYPEduration">Main.Clock.duration</a> -> <a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Cree l'action d'incrementation de l'horloge par rapport a une duree donnee.<br>
+</div>
+
+<pre><span id="VALextend_sound_with"><span class="keyword">val</span> extend_sound_with</span> : <code class="type">string -> <a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Cree l'action qui ajoute a un son une string donnee.<br>
+</div>
+
+<pre><span id="VALfinalize_sound"><span class="keyword">val</span> finalize_sound</span> : <code class="type"><a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Cree l'action qui finalise un objet data au sens de la fonction finalize du module Data.<br>
+</div>
+
+<pre><span id="VALmake_sound"><span class="keyword">val</span> make_sound</span> : <code class="type">string -> <a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Cree l'action qui cree un son a partir d'une string.<br>
+</div>
+
+<pre><span id="VALupdate_clock"><span class="keyword">val</span> update_clock</span> : <code class="type"><a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Cree l'action qui met a jour l'horloge avec une autre horloge donnee en parametre.<br>
+</div>
+
+<pre><span id="VALapply_sequence_of"><span class="keyword">val</span> apply_sequence_of</span> : <code class="type"><a href="Main.html#TYPEaction">Main.action</a> <a href="Main.html#TYPEsequence">Main.sequence</a> -> <a href="Main.html#TYPEaction">Main.action</a></code></pre><div class="info ">
+Applique une liste d'actions en une seule.<br>
+</div>
+</body></html>

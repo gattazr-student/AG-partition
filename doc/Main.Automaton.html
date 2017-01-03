@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Main.Action.html">
+<link rel="next" href="Main.State.html">
+<link rel="Up" href="Main.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main.Automaton</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Main.Action.html" title="Main.Action">Previous</a>
+&nbsp;<a class="up" href="Main.html" title="Main">Up</a>
+&nbsp;<a class="post" href="Main.State.html" title="Main.State">Next</a>
+</div>
+<h1>Module <a href="type_Main.Automaton.html">Main.Automaton</a></h1>
+
+<pre><span class="keyword">module</span> Automaton: <code class="code">sig</code> <a href="Main.Automaton.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module d'operations sur les automates.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALinitial_node"><span class="keyword">val</span> initial_node</span> : <code class="type"><a href="Main.html#TYPEnode">Main.node</a></code></pre><div class="info ">
+Noeud initial = 1<br>
+</div>
+
+<pre><span id="VALmake"><span class="keyword">val</span> make</span> : <code class="type">string -> <a href="Main.html#TYPEtransition">Main.transition</a> list -> <a href="Main.html#TYPEautomaton">Main.automaton</a></code></pre><div class="info ">
+Cree un automate a partir d'une string (le nom de l'automate) et d'une liste de transitions.<br>
+</div>
+
+<pre><span id="VALget_transition_on"><span class="keyword">val</span> get_transition_on</span> : <code class="type"><a href="Main.html#TYPEsymbol">Main.symbol</a> -> <a href="Main.html#TYPEautomaton">Main.automaton</a> -> <a href="Main.html#TYPEnode">Main.node</a> -> <a href="Main.html#TYPEtransition">Main.transition</a> option</code></pre><div class="info ">
+Je ne sais pas pour le moment.<br>
+</div>
+
+<pre><span id="VALinstall"><span class="keyword">val</span> install</span> : <code class="type"><a href="Main.html#TYPEautomaton">Main.automaton</a> list -> (string * <a href="Main.html#TYPEautomaton">Main.automaton</a>) list</code></pre><div class="info ">
+Transforme une liste d'automates en une liste de couples (string * automaton) representant un automate associe a son nom.<br>
+</div>
+
+<pre><span id="VALnamed"><span class="keyword">val</span> named</span> : <code class="type">string -> (string * <a href="Main.html#TYPEautomaton">Main.automaton</a>) list -> <a href="Main.html#TYPEautomaton">Main.automaton</a></code></pre><div class="info ">
+Retourne l'automate associe a un nom donne en parametre, en faisant la recherche dans une liste de couple (nom * automate). Pour plus d'informations, consulter la doc de List sur http://caml.inria.fr/pub/docs/manual-ocaml/libref/List.html et plus particulièrement la fonction assoc de ce module.<br>
+</div>
+</body></html>

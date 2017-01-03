@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Main.Sound.html">
+<link rel="next" href="Main.Action.html">
+<link rel="Up" href="Main.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main.Data</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Main.Sound.html" title="Main.Sound">Previous</a>
+&nbsp;<a class="up" href="Main.html" title="Main">Up</a>
+&nbsp;<a class="post" href="Main.Action.html" title="Main.Action">Next</a>
+</div>
+<h1>Module <a href="type_Main.Data.html">Main.Data</a></h1>
+
+<pre><span class="keyword">module</span> Data: <code class="code">sig</code> <a href="Main.Data.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module d'operations sur le type data.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALinitial"><span class="keyword">val</span> initial</span> : <code class="type"><a href="Main.html#TYPEdata">Main.data</a></code></pre><div class="info ">
+Initialise une variable data, clock a 0.0, sic a Nil et soundtrack a [].<br>
+</div>
+
+<pre><span id="VALfinalize"><span class="keyword">val</span> finalize</span> : <code class="type"><a href="Main.html#TYPEdata">Main.data</a> -> <a href="Main.html#TYPEdata">Main.data</a></code></pre><div class="info ">
+Finalise une variable data en ajoutant le son en construction a la soundtrack et en detruisant sic.<br>
+</div>
+
+<pre><span id="VALget_clock"><span class="keyword">val</span> get_clock</span> : <code class="type"><a href="Main.html#TYPEdata">Main.data</a> -> <a href="Main.html#TYPEclock">Main.clock</a></code></pre><div class="info ">
+Recupere la clock.<br>
+</div>
+
+<pre><span id="VALget_soundtrack"><span class="keyword">val</span> get_soundtrack</span> : <code class="type"><a href="Main.html#TYPEdata">Main.data</a> -> <a href="Main.html#TYPEsoundtrack">Main.soundtrack</a></code></pre><div class="info ">
+Recupere la soundtrack.<br>
+</div>
+
+<pre><span id="VALupdate_clock"><span class="keyword">val</span> update_clock</span> : <code class="type"><a href="Main.html#TYPEclock">Main.clock</a> -> <a href="Main.html#TYPEdata">Main.data</a> -> <a href="Main.html#TYPEdata">Main.data</a></code></pre><div class="info ">
+Met a jour l'horloge en attribuant a l'horloge d'une variable data, la valeur d'une clock passee en parametre.<br>
+</div>
+</body></html>

@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Main.html">Main</a></h1>
+
+<pre><span class="keyword">module</span> Main: <code class="code">sig</code> <a href="Main.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Parser de partitions.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VAL_DEBUG_"><span class="keyword">val</span> _DEBUG_</span> : <code class="type">bool</code></pre><div class="info ">
+Variable de debuggage.<br>
+</div>
+
+<pre><span id="VALmessage"><span class="keyword">val</span> message</span> : <code class="type">string -> unit</code></pre><div class="info ">
+Affiche la string donnee en parametre sur la sortie standard si _DEBUG_ est vrai.<br>
+</div>
+
+<pre><span id="VALrow_sheet"><span class="keyword">val</span> row_sheet</span> : <code class="type">string</code></pre><div class="info ">
+Feuille de partition donnee par Mr Perin.<br>
+</div>
+
+<pre><span class="keyword">module</span> <a href="Main.MyList.html">MyList</a>: <code class="code">sig</code> <a href="Main.MyList.html">..</a> <code class="code">end</code></pre><div class="info">
+Module de modification de liste et de liste de listes.
+</div>
+
+<pre><span class="keyword">module</span> <a href="Main.MyString.html">MyString</a>: <code class="code">sig</code> <a href="Main.MyString.html">..</a> <code class="code">end</code></pre><div class="info">
+Module de modification de string.
+</div>
+
+<pre><span id="VALtest"><span class="keyword">val</span> test</span> : <code class="type">unit -> unit</code></pre><div class="info ">
+Variable de test pour test_transpose.<br>
+</div>
+
+<pre><code><span id="TYPEpattern"><span class="keyword">type</span> <code class="type">'a</code> pattern</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpattern.ANY"><span class="constructor">ANY</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpattern.KEY"><span class="constructor">KEY</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpattern.BUT"><span class="constructor">BUT</span></span> <span class="keyword">of</span> <code class="type">'a</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpattern.IN"><span class="constructor">IN</span></span> <span class="keyword">of</span> <code class="type">'a list</code></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTpattern.OUT"><span class="constructor">OUT</span></span> <span class="keyword">of</span> <code class="type">'a list</code></code></td>
+
+</tr></table>
+
+<div class="info ">
+Definition du type pattern pour les transitions dans un automate.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Pattern.html">Pattern</a>: <code class="code">sig</code> <a href="Main.Pattern.html">..</a> <code class="code">end</code></pre><div class="info">
+Module definissant des operations utiles sur le type pattern.
+</div>
+
+<pre><span id="TYPEclock"><span class="keyword">type</span> <code class="type"></code>clock</span> = <code class="type">float</code> </pre>
+<div class="info ">
+Definition du type clock pour la valeur de tempo et de duree sur la partition.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Clock.html">Clock</a>: <code class="code">sig</code> <a href="Main.Clock.html">..</a> <code class="code">end</code></pre><div class="info">
+Module definissant des operations utiles sur le type clock.
+</div>
+
+<pre><span id="TYPEsound"><span class="keyword">type</span> <code class="type"></code>sound</span> = <code class="type">string</code> </pre>
+<div class="info ">
+Definition du type sound definissant un son dans la lecture de la partition.<br>
+</div>
+
+
+<pre><span id="TYPEtimed_sound"><span class="keyword">type</span> <code class="type"></code>timed_sound</span> = <code class="type"><a href="Main.html#TYPEclock">clock</a> * <a href="Main.html#TYPEsound">sound</a></code> </pre>
+<div class="info ">
+Definition du type timed_sound, associant a un son, une date.<br>
+</div>
+
+
+<pre><span id="TYPEsequence"><span class="keyword">type</span> <code class="type">'t</code> sequence</span> = <code class="type">'t list</code> </pre>
+
+
+<pre><span id="TYPEsoundtrack"><span class="keyword">type</span> <code class="type"></code>soundtrack</span> = <code class="type"><a href="Main.html#TYPEtimed_sound">timed_sound</a> <a href="Main.html#TYPEsequence">sequence</a></code> </pre>
+<div class="info ">
+Definition du type soundtrack comme etant une liste de timed_sound.<br>
+</div>
+
+
+<pre><code><span id="TYPEsic"><span class="keyword">type</span> <code class="type"></code>sic</span> = </code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsic.Nil"><span class="constructor">Nil</span></span></code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code><span class="keyword">|</span></code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTsic.Sic"><span class="constructor">Sic</span></span> <span class="keyword">of</span> <code class="type">(<a href="Main.html#TYPEclock">clock</a> * string list)</code></code></td>
+
+</tr></table>
+
+<div class="info ">
+Definition du type sic representant un son en construction. Soit il est nul, soit c'est une liste de string associee a une date.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Sound.html">Sound</a>: <code class="code">sig</code> <a href="Main.Sound.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operations sur le type sic.
+</div>
+
+<pre><code><span id="TYPEdata"><span class="keyword">type</span> <code class="type"></code>data</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdata.clock">clock</span>&nbsp;: <code class="type"><a href="Main.html#TYPEclock">clock</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdata.sound">sound</span>&nbsp;: <code class="type"><a href="Main.html#TYPEsic">sic</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTdata.soundtrack">soundtrack</span>&nbsp;: <code class="type"><a href="Main.html#TYPEsoundtrack">soundtrack</a></code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Definition du type data comme etant compose d'une date, d'un son et d'une soundtrack.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Data.html">Data</a>: <code class="code">sig</code> <a href="Main.Data.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operations sur le type data.
+</div>
+
+<pre><span id="TYPEsymbol"><span class="keyword">type</span> <code class="type"></code>symbol</span> = <code class="type">string</code> </pre>
+
+
+<pre><span id="TYPEaction"><span class="keyword">type</span> <code class="type"></code>action</span> = <code class="type"><a href="Main.html#TYPEclock">clock</a> * <a href="Main.html#TYPEdata">data</a> * <a href="Main.html#TYPEsymbol">symbol</a> -> <a href="Main.html#TYPEdata">data</a></code> </pre>
+<div class="info ">
+Definition du type action, tel que action est l'ensemble des fonctions prennant en parametre un triplet de (clock * data * symbol) et renvoyant une variable de type data.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Action.html">Action</a>: <code class="code">sig</code> <a href="Main.Action.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operation avec le type action.
+</div>
+
+<pre><span id="VALepsilon"><span class="keyword">val</span> epsilon</span> : <code class="type">string</code></pre><div class="info ">
+Variable epsilon des automates a epsilon-transition.<br>
+</div>
+
+<pre><span id="TYPEinputs"><span class="keyword">type</span> <code class="type"></code>inputs</span> = <code class="type"><a href="Main.html#TYPEsymbol">symbol</a> <a href="Main.html#TYPEsequence">sequence</a></code> </pre>
+<div class="info ">
+Definition d'inputs, soit une liste de symbol (string).<br>
+</div>
+
+
+<pre><span id="TYPEnode"><span class="keyword">type</span> <code class="type"></code>node</span> = <code class="type">int</code> </pre>
+
+
+<pre><span id="TYPEtransition"><span class="keyword">type</span> <code class="type"></code>transition</span> = <code class="type"><a href="Main.html#TYPEnode">node</a> * <a href="Main.html#TYPElabel">label</a> * <a href="Main.html#TYPEaction">action</a> <a href="Main.html#TYPEsequence">sequence</a> * <a href="Main.html#TYPEnode">node</a></code> </pre>
+<div class="info ">
+Definition du type transition, tel qu'une transition va d'un noeud vers un nouveau et, est definit par un label de type symbol pattern (une pattern de symbol (se referer aux fonctions sur les pattern)) et d'une sequence d'actions a faire.<br>
+</div>
+
+
+<pre><span id="TYPElabel"><span class="keyword">type</span> <code class="type"></code>label</span> = <code class="type"><a href="Main.html#TYPEsymbol">symbol</a> <a href="Main.html#TYPEpattern">pattern</a></code> </pre>
+
+
+<pre><code><span id="TYPEautomaton"><span class="keyword">type</span> <code class="type"></code>automaton</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTautomaton.name">name</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTautomaton.transitions">transitions</span>&nbsp;: <code class="type"><a href="Main.html#TYPEtransition">transition</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Definition d'un automate par son nom et une liste de transitions.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Automaton.html">Automaton</a>: <code class="code">sig</code> <a href="Main.Automaton.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operations sur les automates.
+</div>
+
+<pre><span id="VALadef"><span class="keyword">val</span> adef</span> : <code class="type"><a href="Main.html#TYPEautomaton">automaton</a></code></pre><div class="info ">
+Automate par defaut. Automate a 1 etat. &lt;br&gt; (1, tout, 1) -&gt; update_clock.<br>
+</div>
+
+<pre><span id="VALdigit"><span class="keyword">val</span> digit</span> : <code class="type">string list</code></pre><div class="info ">
+Liste des chiffres de 0 à 9 sous forme de caracteres ('0'..'9').<br>
+</div>
+
+<pre><span id="VALatempo"><span class="keyword">val</span> atempo</span> : <code class="type"><a href="Main.html#TYPEautomaton">automaton</a></code></pre><div class="info ">
+Automate de parsing du tempo. Automate a 1 etat.&lt;br&gt; (1, si c'est un digit, 1) -&gt; increase_clock_by 1.0 &lt;br&gt; (1, '.', 1) -&gt; increase_clock_by 0.5 &lt;br&gt; (1, 'T' ou ':' ou '|' ou ' ', 1) -&gt; ne rien faire.<br>
+</div>
+
+<pre><span id="VALadrum"><span class="keyword">val</span> adrum</span> : <code class="type"><a href="Main.html#TYPEautomaton">automaton</a></code></pre><div class="info ">
+Automate de parsing de la batterie. Automate a 1 etat.&lt;br&gt; (1, 'b', 1) -&gt; extend_sound_with "tchak" &lt;br&gt; (1, 'B', 1) -&gt; make_sound "Poum" &lt;br&gt; (1, tout sauf 'b' et 'B', 1) -&gt; finalize_sound.<br>
+</div>
+
+<pre><span id="VAL_AUTOMATA_"><span class="keyword">val</span> _AUTOMATA_</span> : <code class="type">(string * <a href="Main.html#TYPEautomaton">automaton</a>) list</code></pre><div class="info ">
+Liste des automates adef, atempo et adrum associes a leur noms respectifs.<br>
+</div>
+
+<pre><code><span id="TYPEstate"><span class="keyword">type</span> <code class="type"></code>state</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate.node">node</span>&nbsp;: <code class="type"><a href="Main.html#TYPEnode">node</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTstate.data">data</span>&nbsp;: <code class="type"><a href="Main.html#TYPEdata">data</a></code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Definition du type state. Un etat est definit par le noeud courrant et par la donnee du son en construction.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.State.html">State</a>: <code class="code">sig</code> <a href="Main.State.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operations sur le le type State.
+</div>
+
+<pre><code><span id="TYPEprocess"><span class="keyword">type</span> <code class="type"></code>process</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprocess.automaton">automaton</span>&nbsp;: <code class="type">string</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTprocess.state">state</span>&nbsp;: <code class="type"><a href="Main.html#TYPEstate">state</a></code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Definition du type process, tel qu'une process est compose du nom d'un automate et d'un etat.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.Process.html">Process</a>: <code class="code">sig</code> <a href="Main.Process.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'operations sur le type process.
+</div>
+
+<pre><span id="TYPEframe"><span class="keyword">type</span> <code class="type"></code>frame</span> = <code class="type">char list</code> </pre>
+<div class="info ">
+</div>
+
+
+<pre><span id="TYPEsheet"><span class="keyword">type</span> <code class="type"></code>sheet</span> = <code class="type"><a href="Main.html#TYPEframe">frame</a> list</code> </pre>
+
+
+<pre><code><span id="TYPErun"><span class="keyword">type</span> <code class="type"></code>run</span> = {</code></pre><table class="typetable">
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrun.clock">clock</span>&nbsp;: <code class="type"><a href="Main.html#TYPEclock">clock</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrun.processus">processus</span>&nbsp;: <code class="type"><a href="Main.html#TYPEprocess">process</a> list</code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrun.sheet">sheet</span>&nbsp;: <code class="type"><a href="Main.html#TYPEsheet">sheet</a></code>;</code></td>
+
+</tr>
+<tr>
+<td align="left" valign="top" >
+<code>&nbsp;&nbsp;</code></td>
+<td align="left" valign="top" >
+<code><span id="TYPEELTrun.soundtracks">soundtracks</span>&nbsp;: <code class="type"><a href="Main.html#TYPEsoundtrack">soundtrack</a> list</code>;</code></td>
+
+</tr></table>
+}
+
+<div class="info ">
+Un sheet parser est une liste de processus. Chaque processus doit analyser une ligne de la partition. Tout les processus fonctionnent en meme temps tout en etant synchronise. &lt;br&gt; Le type run est definit par une clock de reference pour tout les process, une liste de process, ce qu'il reste a lire de la partition et une liste de soundtrack.&lt;br&gt; Quand on arrive a la fin de la partition, la liste de soundtracks est rempli par l'ensemble des soundtracks de chaque process.<br>
+</div>
+
+
+<pre><span class="keyword">module</span> <a href="Main.SheetParser.html">SheetParser</a>: <code class="code">sig</code> <a href="Main.SheetParser.html">..</a> <code class="code">end</code></pre><div class="info">
+Module d'utilisation du Parser de Partitions.
+</div>
+
+<pre><span id="VAL_RUN"><span class="keyword">val</span> _RUN</span> : <code class="type"><a href="Main.html#TYPErun">run</a> Pervasives.ref</code></pre><div class="info ">
+Utilisation de l'imperatif pour la lecture de la partition.<br>
+</div>
+
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type"><a href="Main.html#TYPEautomaton">automaton</a> list -> <a href="Main.html#TYPEsheet">sheet</a> -> <a href="Main.html#TYPErun">run</a></code></pre><div class="info ">
+<b>Imperatif : </b>Initialise le parser en utilisant la fonction initialise du module SheetParser.<br>
+</div>
+
+<pre><span id="VALone_step"><span class="keyword">val</span> one_step</span> : <code class="type">unit -> <a href="Main.html#TYPErun">run</a></code></pre><div class="info ">
+<b>Imperatif : </b>Avance d'un pas dans la lecture de la partition.<br>
+</div>
+
+<pre><span id="VALsheetparser"><span class="keyword">val</span> sheetparser</span> : <code class="type"><a href="Main.html#TYPEsheet">sheet</a> -> <a href="Main.html#TYPErun">run</a></code></pre><div class="info ">
+Cree une variable de type run a partir d'une partition, tel que cette variable combine 6 processus correspondants a chaque lignes de la partition.<br>
+</div>
+
+<pre><span id="VALfull_sheet"><span class="keyword">val</span> full_sheet</span> : <code class="type"><a href="Main.MyString.html#TYPEcolumn">MyString.column</a> list</code></pre><div class="info ">
+Transpose de la partition row_sheet. On lis la partition a la verticale.<br>
+</div>
+
+<pre><span id="VALsheet"><span class="keyword">val</span> sheet</span> : <code class="type"><a href="Main.MyString.html#TYPEcolumn">MyString.column</a> list</code></pre><div class="info ">
+Renvoie les 8 premiers elements de la liste representative de la partition lu a la verticale.<br>
+</div>
+</body></html>

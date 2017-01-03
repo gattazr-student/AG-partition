@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Main.Process.html">
+<link rel="Up" href="Main.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Main" rel="Chapter" href="Main.html"><title>Main.SheetParser</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Main.Process.html" title="Main.Process">Previous</a>
+&nbsp;<a class="up" href="Main.html" title="Main">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Main.SheetParser.html">Main.SheetParser</a></h1>
+
+<pre><span class="keyword">module</span> SheetParser: <code class="code">sig</code> <a href="Main.SheetParser.html">..</a> <code class="code">end</code></pre><div class="info module top">
+Module d'utilisation du Parser de Partitions.<br>
+</div>
+<hr width="100%">
+
+<pre><span id="VALinitialize"><span class="keyword">val</span> initialize</span> : <code class="type"><a href="Main.html#TYPEautomaton">Main.automaton</a> list -> <a href="Main.html#TYPEsheet">Main.sheet</a> -> <a href="Main.html#TYPErun">Main.run</a></code></pre><div class="info ">
+Initialise une variable de type run, en initialisant la clock a son etat initial, la liste de processus est cree en utilisant la fonction initialize du module Process permettant d'initialiser un process a partir d'un automate, applique a la liste d'automates. La liste de soundtrack est initialise a [].<br>
+</div>
+
+<pre><span id="VALone_step"><span class="keyword">val</span> one_step</span> : <code class="type"><a href="Main.html#TYPErun">Main.run</a> -> <a href="Main.html#TYPErun">Main.run</a></code></pre><div class="info ">
+Avance d'une etape dans chaque process si la sheet de la variable run passe en parametre n'est pas vide. Si elle est vide, on finalise la liste de soundtracks (on rempli la liste de soundtracks).<br>
+</div>
+</body></html>
